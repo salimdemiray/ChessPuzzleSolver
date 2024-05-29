@@ -7,15 +7,14 @@ using ChessPuzzleSearcher.Tahta;
 
 namespace ChessPuzzleSearcher.Solver
 {
-    public class ChessSoliterSolver
+    public class SoliterChessSolver : IChessPuzzleSolver
     {
         readonly Board _Board;
         readonly List<Hamle> Cozum = new List<Hamle>();
 
-        public ChessSoliterSolver(Board board)
+        public SoliterChessSolver(Board board)
         {
             _Board = board;
-
         }
 
         public bool Solve()

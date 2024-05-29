@@ -15,7 +15,7 @@ namespace ChessPuzzleSearcher
             if (args.Length > 0)
             {
                 SetBord(b, args[0]);
-                ChessSoliterSolver solver1 = new ChessSoliterSolver(b);
+                SoliterChessSolver solver1 = new SoliterChessSolver(b);
                 solver1.Solve();
                 return;
             }
@@ -30,7 +30,7 @@ namespace ChessPuzzleSearcher
             Console.WriteLine(b.BoardText());
 
 
-            ChessSoliterSolver solver = new ChessSoliterSolver(b);
+            SoliterChessSolver solver = new SoliterChessSolver(b);
             solver.Solve();
             Console.ReadLine();
         }
