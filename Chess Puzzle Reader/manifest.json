@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Chess Puzzle Tahta okuyucu",
+  "version": "1.0",
+  "description": "www.puzzle-chess.com sitesindeki tahtayi Çözmek için Tahtayi okur",
+  "permissions": ["activeTab"],
+  "browser_action": {         },
+  "content_scripts": [
+    {
+       "matches": ["https://www.puzzle-chess.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
