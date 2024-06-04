@@ -8,14 +8,14 @@ namespace ChessPuzzleSearcher.Taslar
     [Serializable]
     public abstract class TasBase
     {
-        static int TaskCounter = 1;
-        public int TasId { get; }
+        //static int TaskCounter = 1;
+        public int TasId { get; private set; }
         public abstract string TasHarf { get; }
         public Cell Cell { get; private set; }
 
         protected TasBase()
         {
-            TasId = TaskCounter++;
+            //TasId = TaskCounter++;
         }
 
         public void SetCell(Cell cell)
@@ -44,7 +44,12 @@ namespace ChessPuzzleSearcher.Taslar
         {
             if (!(obj is TasBase)) return false;
             return (obj as TasBase).TasId == TasId;
-        }        
+        }
+
+        public void SetTasId(int tasId)
+        {
+            TasId = tasId;
+        }
 
     }
 

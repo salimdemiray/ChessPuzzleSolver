@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Solver\SoliterChessSolver.cs" />
     <Compile Include="Solver\IChessPuzzleSolver.cs" />
+    <Compile Include="Solver\SoloChessSolver.cs" />
     <Compile Include="Tahta\Board.cs" />
     <Compile Include="Tahta\Cell.cs" />
     <Compile Include="Program.cs" />

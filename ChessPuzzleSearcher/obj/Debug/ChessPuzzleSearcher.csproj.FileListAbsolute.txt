@@ -8,3 +8,13 @@ C:\Users\salim.demiray\source\repos\ChessPuzzleSearcher\ChessPuzzleSearcher\obj\
 C:\Users\salim.demiray\source\repos\ChessPuzzleSearcher\ChessPuzzleSearcher\bin\Debug\Newtonsoft.Json.dll
 C:\Users\salim.demiray\source\repos\ChessPuzzleSearcher\ChessPuzzleSearcher\bin\Debug\Newtonsoft.Json.xml
 C:\Users\salim.demiray\source\repos\ChessPuzzleSearcher\ChessPuzzleSearcher\obj\Debug\ChessPuzzleSearcher.csproj.CopyComplete
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\obj\Debug\ChessPuzzleSearcher.csprojAssemblyReference.cache
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\obj\Debug\ChessPuzzleSearcher.csproj.CoreCompileInputs.cache
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\obj\Debug\ChessPuzzleSearcher.exe
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\obj\Debug\ChessPuzzleSearcher.pdb
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\bin\Debug\ChessPuzzleSearcher.exe.config
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\bin\Debug\ChessPuzzleSearcher.exe
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\bin\Debug\ChessPuzzleSearcher.pdb
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\bin\Debug\Newtonsoft.Json.dll
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\bin\Debug\Newtonsoft.Json.xml
+C:\Users\salim.demiray\source\repos\ChessPuzzleNew\ChessPuzzleSearcher\obj\Debug\ChessPuzzleSearcher.csproj.CopyComplete
