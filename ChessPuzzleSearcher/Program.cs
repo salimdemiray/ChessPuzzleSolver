@@ -20,18 +20,25 @@ namespace ChessPuzzleSearcher
                 return;
             }
 
-
+            //Soliter Çözümleri
             //SetBord(b, "C6:F;C5:K,C4:A;C3:F,D4:A,D3:P;e5:Ş;F5:P");
             //SetBord(b, "C6:A;C4:F;D6:K;D3:A;e4:Ş;E3:P;f5:p;f3:K");
-            SetBord(b, "D6:K;D4:K;F4:F;C3:F");
+            //SetBord(b, "D6:K;D4:K;F4:F;C3:F"); 
 
             //Puzzle1(b);
 
-            Console.WriteLine(b.BoardText());
+
+            //Solo Çözümleri
+            //SetBord(b, "C6:Ş;D6:P;E6:P;D5:F;D4:A");
+            SetBord(b, " C6:Ş;D5:F;E5:K;F5:F;C4:P;D4:A;F4:A;E3:P");
+
+            var s = new SoloChessSolver(b);
+            s.Solve();
+            //Console.WriteLine(b.BoardText());
 
 
-            SoliterChessSolver solver = new SoliterChessSolver(b);
-            solver.Solve();
+            //SoliterChessSolver solver = new SoliterChessSolver(b);
+            //solver.Solve();
             Console.ReadLine();
         }
 
@@ -49,7 +56,7 @@ namespace ChessPuzzleSearcher
                 .ToArray();
 
             //C6:F;C5:K,C4:A;C3:F,D4:A,D3:P;e5:Ş;F5:P
-
+            int index = 1;
             foreach (var hamleText in hamleTextleri)
             {
                 var sdHamle = hamleText.Split(':');
@@ -84,29 +91,10 @@ namespace ChessPuzzleSearcher
                     default:
                         throw new ArithmeticException(tasText + " Taş Tanımı Yok");
                 }
+                tas.SetTasId(index++);
                 b.SetCell(cellName, tas);
             }
         }
-
-
-
-        static void Puzzle1(Board b)
-        {
-            b.SetCell(5, 3, new Kale());
-            b.SetCell(5, 4, new Piyon());
-            b.SetCell(6, 5, new At());
-            b.SetCell(5, 6, new Piyon());
-        }
-
-        static void Puzzle2(Board b)
-        {
-            b.SetCell(5, 3, new Kale());
-            b.SetCell(5, 4, new Piyon());
-            b.SetCell(6, 5, new At());
-            b.SetCell(5, 6, new Piyon());
-        }
-
-
-
+                           
     }
 }

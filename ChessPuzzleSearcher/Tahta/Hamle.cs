@@ -9,9 +9,12 @@ namespace ChessPuzzleSearcher.Tahta
         public Hamle(TasBase tas, Cell kaynak, Cell hedef)
         {
             TasKaynak = (TasBase)Activator.CreateInstance(tas.GetType());
+            if (kaynak.Tas != null) TasKaynak.SetTasId(kaynak.Tas.TasId);
+
             Kaynak = kaynak;
             Hedef = hedef;
             TasHedef = (TasBase)Activator.CreateInstance(hedef.Tas.GetType());
+            if (hedef.Tas != null) TasHedef.SetTasId(hedef.Tas.TasId);
         }
 
         public TasBase TasKaynak { get; set; }
