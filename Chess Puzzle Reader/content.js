@@ -39,6 +39,27 @@ function Write(div) {
 		case "icon-wk":
 			tas = "Ş";
 			break;
+			
+			
+			case "icon-bp":
+			tas = "PB";
+			break;
+		case "icon-br":
+			tas = "KB";
+			break;
+		case "icon-bn":
+			tas = "AB";
+			break;
+		case "icon-bb":
+			tas = "FB";
+			break;
+		case "icon-bq":
+			tas = "VB";
+			break;
+		case "icon-bk":
+			tas = "ŞB";
+			break;
+			
 	}
 	return WriteLetter(c.left) + (8 - c.top) + ":" + tas;
 }
