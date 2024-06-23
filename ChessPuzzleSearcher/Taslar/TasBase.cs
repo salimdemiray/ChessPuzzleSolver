@@ -12,10 +12,12 @@ namespace ChessPuzzleSearcher.Taslar
         public int TasId { get; private set; }
         public abstract string TasHarf { get; }
         public Cell Cell { get; private set; }
+        public TasRenk Renk { get; set; }
 
         protected TasBase()
         {
             //TasId = TaskCounter++;
+            Renk = TasRenk.White;
         }
 
         public void SetCell(Cell cell)
@@ -51,7 +53,54 @@ namespace ChessPuzzleSearcher.Taslar
             TasId = tasId;
         }
 
+        public string PrintTas()
+        {
+            return Renk == TasRenk.White ? TasHarf.ToUpper() : TasHarf.ToLower();
+        }
+
+        public static TasBase Copy(TasBase source)
+        {
+            if (source == null) return null;
+
+            var target = (TasBase)Activator.CreateInstance(source.GetType());
+
+            target.SetTasId(source.TasId);
+            target.Renk = source.Renk;
+
+            return target;
+        }
+
+        public static TasBase TextToTas(string tasText)
+        {
+            TasBase tas = null;
+            switch (tasText)
+            {
+                case "K":
+                    tas = new Kale();
+                    break;
+                case "A":
+                    tas = new At();
+                    break;
+                case "F":
+                    tas = new Fil();
+                    break;
+                case "Ş":
+                    tas = new Sah();
+                    break;
+                case "V":
+                    tas = new Vezir();
+                    break;
+                case "P":
+                    tas = new Piyon();
+                    break;
+
+
+                default:
+                    throw new ArithmeticException(tasText + " Taş Tanımı Yok");
+            }
+
+            return tas;
+        }
+
     }
-
-
 }

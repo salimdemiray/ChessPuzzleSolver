@@ -21,7 +21,7 @@ namespace ChessPuzzleSearcher.Tahta
 
         public string CellDisplayText()
         {
-            return Tas == null ? "_" : Tas.TasHarf;
+            return Tas == null ? "_" : Tas.PrintTas();
         }
 
         public override int GetHashCode()

@@ -4,3 +4,8 @@ ChessPuzzleSearcher/obj
 /packages/Newtonsoft.Json.13.0.3
 bin/Debug
 obj/Debug
+/ChessPuzzleSearcher/bin
+ChessPuzzleSearcher/bin/Debug/ChessPuzzleSearcher.exe
+ChessPuzzleSearcher/bin/Debug/ChessPuzzleSearcher.pdb
+ChessPuzzleSearcher/obj/Debug/ChessPuzzleSearcher.csproj.CoreCompileInputs.cache
+/ChessPuzzleSearcher/obj

@@ -32,9 +32,11 @@ namespace ChessPuzzleSearcher
             //SetBord(b, "C6:Ş;D6:P;E6:P;D5:F;D4:A");
             SetBord(b, " C6:Ş;D5:F;E5:K;F5:F;C4:P;D4:A;F4:A;E3:P");
 
+            //SetBord(b, "C6:PB;D5:FB;E5:KB;F5:F;C4:P;D4:A;F4:A;E3:P");
+            //SetBord(b, "C6:PB;D5:FB");
             var s = new SoloChessSolver(b);
             s.Solve();
-            //Console.WriteLine(b.BoardText());
+            Console.WriteLine(b.BoardText());
 
 
             //SoliterChessSolver solver = new SoliterChessSolver(b);
@@ -63,38 +65,25 @@ namespace ChessPuzzleSearcher
                 if (sdHamle.Length != 2) throw new ArithmeticException(hamleText + " Hamle Hatalı");
 
                 var cellName = sdHamle[0].ToUpper();
-                var tasText = sdHamle[1].ToUpper();
+                var tasBilgisi = sdHamle[1];
 
-                TasBase tas = null;
-                switch (tasText)
+                var tasText = tasBilgisi.Trim()[0].ToString().ToUpper();
+
+                var ColorText = "W";
+
+                if (tasBilgisi.Length == 2)
                 {
-                    case "K":
-                        tas = new Kale();
-                        break;
-                    case "A":
-                        tas = new At();
-                        break;
-                    case "F":
-                        tas = new Fil();
-                        break;
-                    case "Ş":
-                        tas = new Sah();
-                        break;
-                    case "V":
-                        tas = new Vezir();
-                        break;
-                    case "P":
-                        tas = new Piyon();
-                        break;
-
-
-                    default:
-                        throw new ArithmeticException(tasText + " Taş Tanımı Yok");
+                    ColorText = tasBilgisi.Substring(1, 1).ToUpper();
                 }
+
+                TasBase tas = TasBase.TextToTas(tasText);
+
+                if (ColorText == "B") tas.Renk = TasRenk.Black;
                 tas.SetTasId(index++);
                 b.SetCell(cellName, tas);
             }
         }
-                           
+
+
     }
 }

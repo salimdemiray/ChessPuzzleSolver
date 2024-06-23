@@ -34,7 +34,7 @@ namespace ChessPuzzleSearcher.Taslar.HamleOps
                 var cell = _Board.GetCell(curCell, _Tas.Cell.Row);
                 if (cell.Tas == null) continue;
 
-                _Hamleler.Add(new Hamle(_Tas, _Tas.Cell, cell));
+                _Hamleler.Add(new Hamle(_Tas.Cell, cell));
                 break;
             }
             return this;
@@ -51,7 +51,7 @@ namespace ChessPuzzleSearcher.Taslar.HamleOps
                 var cell = _Board.GetCell(curCell, _Tas.Cell.Row);
                 if (cell.Tas == null) continue;
 
-                _Hamleler.Add(new Hamle(_Tas, _Tas.Cell, cell));
+                _Hamleler.Add(new Hamle(_Tas.Cell, cell));
                 break;
             }
             return this;
@@ -68,7 +68,7 @@ namespace ChessPuzzleSearcher.Taslar.HamleOps
                 var cell = _Board.GetCell(_Tas.Cell.Col, curCell);
                 if (cell.Tas == null) continue;
 
-                _Hamleler.Add(new Hamle(_Tas, _Tas.Cell, cell));
+                _Hamleler.Add(new Hamle(_Tas.Cell, cell));
                 break;
             }
             return this;
@@ -85,7 +85,7 @@ namespace ChessPuzzleSearcher.Taslar.HamleOps
                 var cell = _Board.GetCell(_Tas.Cell.Col, curCell);
                 if (cell.Tas == null) continue;
 
-                _Hamleler.Add(new Hamle(_Tas, _Tas.Cell, cell));
+                _Hamleler.Add(new Hamle(_Tas.Cell, cell));
                 break;
             }
             return this;
@@ -113,7 +113,7 @@ namespace ChessPuzzleSearcher.Taslar.HamleOps
                 var cell = _Board.GetCell(cCol, cRow);
                 if (cell.Tas == null) continue;
 
-                _Hamleler.Add(new Hamle(_Tas, _Tas.Cell, cell));
+                _Hamleler.Add(new Hamle(_Tas.Cell, cell));
                 break;
             }
             return this;
@@ -133,7 +133,7 @@ namespace ChessPuzzleSearcher.Taslar.HamleOps
                 var cell = _Board.GetCell(cCol, cRow);
                 if (cell.Tas == null) continue;
 
-                _Hamleler.Add(new Hamle(_Tas, _Tas.Cell, cell));
+                _Hamleler.Add(new Hamle(_Tas.Cell, cell));
                 break;
             }
             return this;
@@ -155,7 +155,7 @@ namespace ChessPuzzleSearcher.Taslar.HamleOps
                 var cell = _Board.GetCell(cCol, cRow);
                 if (cell.Tas == null) continue;
 
-                _Hamleler.Add(new Hamle(_Tas, _Tas.Cell, cell));
+                _Hamleler.Add(new Hamle(_Tas.Cell, cell));
                 break;
             }
             return this;
@@ -175,7 +175,7 @@ namespace ChessPuzzleSearcher.Taslar.HamleOps
                 var cell = _Board.GetCell(cCol, cRow);
                 if (cell.Tas == null) continue;
 
-                _Hamleler.Add(new Hamle(_Tas, _Tas.Cell, cell));
+                _Hamleler.Add(new Hamle(_Tas.Cell, cell));
                 break;
             }
             return this;
@@ -227,7 +227,7 @@ namespace ChessPuzzleSearcher.Taslar.HamleOps
                         if (c <= 0 || c > _Board.Length || r <= 0 || r > _Board.Length) continue;
                         var cell = _Board.GetCell(c, r);
                         if (cell.Tas == null) continue;
-                        _Hamleler.Add(new Hamle(_Tas, _Tas.Cell, cell));
+                        _Hamleler.Add(new Hamle(_Tas.Cell, cell));
 
                     }
             return this;
